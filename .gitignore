@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+/dist
+/es
+/lib
+
+*.rar
+*.zip
+*.tar.gz
+package-lock.json

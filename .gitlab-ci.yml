@@ -1,0 +1,10 @@
+# 编译：任意分支仅编译打包，包保留在 GitLab 而不上传发布服务器
+build:
+  stage: build
+  tags:
+    - newh5
+  script:
+    - sh build.sh
+  artifacts:
+    paths:
+      - ./*.tar.gz

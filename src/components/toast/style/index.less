@@ -1,0 +1,52 @@
+@import (reference) "../../assets/style/index.less";
+
+.toast {
+    position: fixed;
+    width: 100%;
+    z-index: 1999;
+    &.nomask {
+        max-width: 50%;
+        width: auto;
+        left: 50%;
+        top: 50%;
+        transform: translateZ(1px);
+        .toast-notice {
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+    &.mask {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top: 0;
+        transform: translateZ(1px);
+    }
+    .toast-notice {
+        .toast-notice-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            min-height: 100px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            line-height: 1.5;
+            padding: 15px;
+            &.small {
+                min-width: initial;
+                min-height: initial;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+            .toast-text {
+                color: @color4;
+                font-size: @font-size-sub;
+                font-family: @font-family-regular;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import (reference) '../../../assets/style/index.less';
+
+.libs-assets-card {
+    background-color: @color1;
+
+    .libs-assets-top {
+        line-height: 24px;
+        font-size: @font-size-sub;
+        font-family: @font-family-regular;
+        color: @color4;
+        display: flex;
+        padding-left: 16px;
+        padding-right: 10.5px;
+        justify-content: space-between;
+        align-items: flex-end;
+        .info {
+            flex: 3;
+            .name {
+                display: inline-block;
+                margin-right: 30px;
+            }
+    
+            .account {
+                display: inline-block;
+                .triangle {
+                    width: 6px;
+                    height: 6px;
+                    margin-left: 5px;
+                }
+            }
+    
+        }
+        
+        .currency {
+            font-family: @font-family-medium;
+            flex: 2;
+            text-align: right;
+            padding-bottom: -3px;
+            .currency-box {
+                display: inline-block;
+
+                .currency-item {
+                    line-height: 20px;
+                }
+                .checked {
+                    opacity: 1;
+                }
+                .unChecked {
+                    opacity: 0.69;
+                }
+                .currency-underline {
+                    width: 8px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background: #FFFFFF;
+                    margin: 0 auto;
+                }
+                .show {
+                    opacity: 1;
+                }
+                .hidden {
+                    opacity: 0;
+                }
+            }
+
+            .currency-box:nth-child(2) {
+                margin: 0 14px;
+            }
+        }
+    }
+
+    .libs-assets-middle {
+        height: 84px;
+        text-align: center;
+
+        .title {
+            font-size: @font-size-minor;
+            font-family: @font-family-regular;
+            color: @color4;
+            line-height: 12px;
+            padding-top: 9px;
+        }
+
+        .total {
+            font-family: @font-family-semibold;
+            font-size: @font-size-special;
+            color: @color4;
+            line-height: 22px;
+            padding-top: 6px;
+        }
+
+        .more {
+            font-family: font-family-regular;
+            font-size: @font-size-few;
+            color: @color4;
+            padding-top: 17px;
+
+            .arrow {
+                width: 10px;
+                height: 5px;
+                margin-right: 7px;
+                transition:1s;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import (reference) '../../../assets/style/index.less';
+.input-basic {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    label {
+        // font-family: @font-family-regular;
+        // font-size: @font-size-label;
+        overflow: hidden;
+        word-break: keep-all;
+        position: relative;
+        &.hint {
+            color: grey;
+        }
+        &.value {
+            color: #333333;
+        }
+    }
+    input {
+        width: 100%;
+        height: 100%;
+        // font-family: @font-family-regular;
+        // font-size: @font-size-label;
+        color: #333333;
+        overflow: hidden;
+        word-break: keep-all;
+        outline: none;
+        border: none;
+        background: none;
+        &::placeholder {
+            color: grey;
+            // color: @color23;
+        }
+    }
+    &.active {
+        label {
+            &:before {
+                animation: light 1s 0s infinite;
+                opacity: 1;
+                position: absolute;
+                left: 0;
+                width: 1px;
+                height: 100%;
+                content: "";
+                // background: @color11;
+                transform: translate3d(0, 0, 0);
+            }
+            &.value:before {
+                left: initial;
+                right: 0;
+            }
+        }
+    }
+    @keyframes light {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @-moz-keyframes light {
+        0% {
+            opacity: 1;
+        }100% {
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes light {
+        0% {
+            opacity: 1;
+        }100% {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,300 @@
+@import (reference) "../../assets/style/index.less";
+.keyboard {
+    font-family: "@font-family-medium";
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    table {
+        width: 100%;
+    }
+
+    .number-table {
+        overflow: hidden;
+        width: 100%;
+        background: @color4;
+        tr {
+            width: 100%;
+        }
+        td.rightLine {
+            position: relative;
+            &:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                content: '';
+                width: 0;
+                border-left: 1px solid @color15;
+            }
+        }
+        td.del {
+            overflow: hidden;
+            background-color: @special-btn-bgcolor;
+        }
+        td.cfm {
+            background-color: @color19;
+        }
+        .lineWidth {
+            width: 26.7%;
+            &.del {
+                width: 20%;
+            }
+            button {
+                font-size: @keyboard-fontsize;
+                width: 100%;
+                height: @number-button-height;
+                margin: 0;
+                padding: 0;
+                color: @color5;
+                border-style: none;
+                outline: none;
+                background-color: @color4;
+
+            }
+            .btnDelete {
+                margin: 0;
+                margin-top: 10px;
+                padding: 0;
+                background: @special-btn-bgcolor url('../../assets/img/common/icon_delete2.png') no-repeat 40% 40%;
+                background-size: 40% 40%;
+            }
+            .btnConfirm {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                color: @color4;
+                background-color: @color19;
+            }
+
+            .special {
+                background-color: @special-btn-bgcolor;
+            }
+            .special:active, .white-btn:active {
+                background-color: @special-btn-action-bgcolor;
+            }
+        }
+    }
+
+    .stock-table {
+        overflow: hidden;
+        width: 100%;
+        background: @color24;
+        tr {
+            width: 100%;
+        }
+        td.rightLine {
+            position: relative;
+            &:after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                content: '';
+                width: 0;
+                border-left: 1px solid @color5;
+            }
+        }
+        td.del {
+            overflow: hidden;
+            background-color: @special-btn-bgcolor;
+        }
+        td.cfm {
+            background-color: @color19;
+        }
+        .lineWidth {
+            width: 20%;
+            button {
+                font-size: @keyboard-fontsize;
+                width: 100%;
+                height: @number-button-height;
+                margin: 0;
+                padding: 0;
+                color: @color5;
+                border-style: none;
+                outline: none;
+                background-color: @color24;
+
+            }
+            .btnDelete {
+                margin: 0;
+                margin-top: 10px;
+                padding: 0;
+                background: @special-btn-bgcolor url('../../assets/img/common/icon_delete2.png') no-repeat 40% 40%;
+                background-size: 40% 40%;
+            }
+            .btnConfirm {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+
+                color: @color4;
+                background-color: @color19;
+            }
+
+            .special {
+                background-color: @special-btn-bgcolor;
+            }
+            .special:active, .white-btn:active {
+                background-color: @special-btn-action-bgcolor;
+            }
+        }
+    }
+
+    .word-table {
+        width: 100%;
+        background-color: @color13;
+        button {
+            font-size: @keyboard-fontsize;
+            width: 86%;
+            height: @word-button-height;
+            margin: 3px 6%;
+            padding: 0;
+            color: @color5;
+            border-style: none;
+            border-radius: 10%;
+            outline: none;
+            background-color: @color24;
+            box-shadow: 0 1px 3px @color5;
+        }
+
+        .special-delete {
+            background: @word-special-btn-bgcolor url('../../assets/img/common/icon_delete2.png') no-repeat 40%;
+            background-size: 40% 40%;
+        }
+
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 10%;
+        }
+
+        .whitespage {
+            width: 96%;
+            margin: 3px 2%;
+            border-radius: 8px;
+        }
+
+        .one-width {
+            width: 10%;
+        }
+        .half-width {
+            width: 5%;
+            height: @word-button-height;
+        }
+        .one-half-width {
+            width: 15%;
+        }
+        .two-half-width {
+            width: 20%;
+        }
+        .three-half-width {
+            width: 45%;
+        }
+        .four-width {
+            width: 40%;
+        }
+        .five-width {
+            width: 50%;
+        }
+        .six-half-width {
+            width: 65%;
+        }
+
+        .special {
+            background-color: @word-special-btn-bgcolor;
+        }
+
+        .whitespage:active, .special:active {
+            background-color: @color15;
+        }
+    }
+
+    .symbol-table {
+        width: 100%;
+        padding: 2px 0;
+        background-color: @color8;
+        td {
+            width: 10%;
+        }
+        button {
+            font-size: @keyboard-fontsize;
+            width: 100%;
+            height: @word-button-height;
+            padding: 0;
+            color: @color5;
+            border-style: none;
+            border-radius: 10%;
+            outline: none;
+            background-color: @color24;
+            box-shadow: 0 1px 3px @color5;
+        }
+
+        .btnDelete {
+            margin: 0;
+            padding: 0;
+            background: @special-btn-bgcolor url('../../assets/img/common/icon_delete2.png') no-repeat 40% 40%;
+            background-size: 40% 40%;
+        }
+
+        .special {
+            background-color: @special-btn-bgcolor;
+        }
+        .special:active, .white:active {
+            background-color: @special-btn-action-bgcolor;
+        }
+    }
+
+    button:active {
+        background-color: @special-btn-action-bgcolor;
+    }
+
+    .verline, .verlineR {
+        height: @number-button-height;
+        background: @color8;
+    }
+
+    .verlineWidth {
+        width: 1px;
+    }
+    .clear {
+        clear: both;
+    }
+
+    .lineSpacial-graybutton {
+        height: 1px;
+        background: @color8;
+    }
+
+    .lineNormal {
+        height: 1px;
+        background: @color8;
+    }
+
+    .verlineR {
+        width: 1px;
+        /* Firefox 3.6+ */
+
+        background:    -moz-linear-gradient(left,transparent 50%,@color8 50%,@color8 100%);
+        /* Safari 4-5, Chrome 1-9 */
+        /* -webkit-gradient(,  [, ]?,  [, ]? [, ]*) */
+        background: -webkit-gradient(linear,left,from(@color24),to(@color8));
+        /* Safari 5.1+, Chrome 10+ */
+        background: -webkit-linear-gradient(left,transparent 50%,@color8 50%,@color8 100%);
+        /* Opera 11.10+ */
+        background:      -o-linear-gradient(left, @color24, @color8);
+    }
+}
+
+@word-button-height:40px;
+@special-btn-bgcolor: @color6;
+@special-btn-action-bgcolor: @color8;
+@word-special-btn-bgcolor: @color8;
+@keyboard-fontsize: @font-size-label;
+@number-button-height: 45px;
