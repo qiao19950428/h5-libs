@@ -81,7 +81,7 @@
     "postcss-safe-parser": "4.0.1",
     "postcss-viewport-units": "0.1.6",
     "postcss-write-svg": "3.0.1",
-    "react-dev-utils": "5.0.1",
+    "react-dev-utils": "10.2.1",
     "rimraf": "2.6.3",
     "rucksack-css": "1.0.2",
     "style-loader": "0.23.1",
